@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 20px 15px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 150px);
+    padding-block: 2rem;
+}
+
+.main h1 {
+    color: var(--primary-color);
+}
+
+.footer {
+    height: 50px;
+    background-color: var(--footer-background);
+}
