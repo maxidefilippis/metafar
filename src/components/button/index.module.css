@@ -1,0 +1,5 @@
+.button {
+    cursor: pointer;
+    padding: 0.25rem;
+    color: var(--text-small-color);
+}
