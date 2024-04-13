@@ -12,7 +12,7 @@
     font-weight: 600;
 }
 
-.button:hover {
+.button:hover:not(:disabled) {
     background: var(--container-shadow);
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -22,4 +22,8 @@
     -webkit-transition: all 0.1s ease;
     -moz-transition: all 0.1s ease;
     transition: all 0.1s ease;
+}
+.button:disabled {
+    cursor: default;
+    background: var(--button-disabled);
 }

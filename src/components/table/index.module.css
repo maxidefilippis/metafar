@@ -4,14 +4,14 @@
     background: var(--container-background);
     border-radius: var(--container-border-radius);
     border: 2px solid var(--container-border);
-    margin: 1rem 0 2rem;
     padding: 1rem 1.5rem 1.5rem;
     -webkit-box-shadow: var(--container-shadow) 14px 14px;
     box-shadow: var(--container-shadow) 14px 14px;
+    gap: 0.25rem;
 }
 .row {
     display: grid;
-    grid-template-columns: 0.3fr 1fr 0.25fr 0.3fr;
+    grid-template-columns: 0.3fr 1fr 0.25fr 0.25fr;
     overflow: hidden;
     gap: 0.5rem;
 }
@@ -22,8 +22,10 @@
 }
 .cell:first-child {
     width: fit-content;
+}
+.link {
     cursor: pointer;
 }
-.cell:first-child:hover {
+.link:hover {
     text-decoration: underline;
 }

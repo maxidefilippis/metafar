@@ -1,0 +1,20 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 0.25rem;
+}
+.table{
+    padding-block: 0.5rem 2rem;
+}
+.results {
+    display: flex;
+    align-items: center;
+    padding-inline: 0.25rem;
+    justify-content: space-between;
+}
+.buttons {
+    display: grid;
+    gap: 0.2rem;
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+}

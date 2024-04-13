@@ -7,7 +7,9 @@ import { Typography } from '../../components/typografhy';
 import { apiUrl, pageSize } from '../../constants/globals';
 import { Action } from '../../models/action';
 import { StockResponse, emptyStockResponse } from '../../models/apiResponse';
+import { TextType } from '../../models/textType';
 import { ActionsTable } from './components/actionsTable';
+import styles from './index.module.css';
 
 export const Home = () => {
     const { t } = useTranslation('home');
@@ -45,16 +47,20 @@ export const Home = () => {
 
     return (
         <>
-            <div>
-                <Typography text={t('TABLE.PAGE', { currentPage, totalPages })} />
-                <Typography text={t('TABLE.RESULTS', { pageSize, count: data.count })} />
+            <div className={styles.title}>
+                <Typography type={TextType.TITLE} text={t('HOME.TITLE')} />
             </div>
-            <Table>
-                <ActionsTable actions={actions} />
-            </Table>
-            <div>
-                {currentPage > 1 && <Button onClick={handleBack}>{t('BUTTONS.BACK')}</Button>}
-                {currentPage < totalPages && <Button onClick={handleNext}>{t('BUTTONS.NEXT')}</Button>}
+            <div className={styles.table}>
+                <Table children={<ActionsTable actions={actions} />} />
+            </div>
+            <div className={styles.results}>
+                <Typography type={TextType.TEXT} text={t('TABLE.PAGE', { currentPage, totalPages })}
+                />
+                <div className={styles.buttons}>
+                    <Button onClick={handleBack} disabled={currentPage <= 1}>{t('BUTTONS.BACK')}</Button>
+                    <Button onClick={handleNext} disabled={currentPage >= totalPages}>{t('BUTTONS.NEXT')}</Button>
+                </div>
+                <Typography type={TextType.TEXT} text={t('TABLE.RESULTS', { pageSize, count: data.count })} />
             </div>
         </>
     );

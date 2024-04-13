@@ -1,12 +1,15 @@
 {
+    "HOME": {
+        "TITLE": "Stock de acciones"
+    },
     "TABLE": {
         "PAGE": "Página {{ currentPage }} de {{ totalPages }}",
         "RESULTS": "Mostrando {{ pageSize }} resultados de {{ count }}",
         "ROWS": {
-            "SYMBOL": "Símbolo",
-            "NAME": "Nombre",
-            "CURRENCY": "Moneda",
-            "TYPE": "Tipo"
+            "SYMBOL": "SÍMBOLO",
+            "NAME": "NOMBRE",
+            "CURRENCY": "MONEDA",
+            "TYPE": "TIPO"
         }
     },
     "BUTTONS": {
