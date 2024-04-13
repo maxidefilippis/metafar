@@ -7,9 +7,10 @@
 
 .main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     min-height: calc(100vh - 150px);
-    padding-block: 2rem;
+    padding: 2rem;
 }
 
 .main h1 {
