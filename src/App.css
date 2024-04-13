@@ -11,9 +11,13 @@
     --black: #000000;
     --white: #ffffff;
     --grey: #333;
-    --light-grey: #C3C3C3;
+    --light-grey: #c3c3c3;
     --text-small-color: #555;
     --footer-background: #00000010;
+    --container-background: #fefefe;
+    --container-border: #000;
+    --container-shadow: #d2effd;
+    --container-border-radius: 8px;
 }
 
 * {

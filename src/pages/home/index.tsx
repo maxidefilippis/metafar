@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '../../components/button';
 import { Skeleton } from '../../components/skeleton';
 import { Table } from '../../components/table';
 import { Typography } from '../../components/typografhy';
@@ -48,15 +49,12 @@ export const Home = () => {
                 <Typography text={t('TABLE.PAGE', { currentPage, totalPages })} />
                 <Typography text={t('TABLE.RESULTS', { pageSize, count: data.count })} />
             </div>
-            <hr />
             <Table>
                 <ActionsTable actions={actions} />
             </Table>
-
-            <hr />
             <div>
-                {currentPage > 1 && <button onClick={handleBack}>{t('BUTTONS.BACK')}</button>}
-                {currentPage < totalPages && <button onClick={handleNext}>{t('BUTTONS.NEXT')}</button>}
+                {currentPage > 1 && <Button onClick={handleBack}>{t('BUTTONS.BACK')}</Button>}
+                {currentPage < totalPages && <Button onClick={handleNext}>{t('BUTTONS.NEXT')}</Button>}
             </div>
         </>
     );
