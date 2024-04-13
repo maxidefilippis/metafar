@@ -1,7 +1,6 @@
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { layout_es } from '../translations';
-
+import { components_es, layout_es } from '../translations';
 
 i18next.use(initReactI18next).init({
     lng: 'es',
@@ -9,6 +8,7 @@ i18next.use(initReactI18next).init({
     resources: {
         es: {
             layout: layout_es,
+            components: components_es,
         },
     },
 });
