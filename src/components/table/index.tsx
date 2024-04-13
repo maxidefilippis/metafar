@@ -1,10 +1,11 @@
+import { Typography } from '../typografhy';
 import styles from './index.module.css';
 
 interface RenderTableProps {
     children: JSX.Element | JSX.Element[];
 }
 export const Table = ({ children }: RenderTableProps) => {
-    return <div className={styles.currenciesTable}>{children}</div>;
+    return <div className={styles.table}>{children}</div>;
 };
 
 interface TableRowProps {
@@ -20,11 +21,11 @@ interface TableCellProps {
 }
 export const TableCell = ({ data, onClick }: TableCellProps) => {
     return (
-        <span
+        <div
             className={styles.cell}
             onClick={onClick}
         >
-            {data}
-        </span>
+            <Typography text={data} />
+        </div>
     );
 };

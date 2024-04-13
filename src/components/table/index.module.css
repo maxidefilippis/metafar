@@ -1,17 +1,24 @@
 .table {
     display: flex;
     flex-direction: column;
+    background: var(--container-background);
+    border-radius: var(--container-border-radius);
+    border: 2px solid var(--container-border);
+    margin: 1rem 0 2rem;
+    padding: 1rem 1.5rem 1.5rem;
+    -webkit-box-shadow: var(--container-shadow) 14px 14px;
+    box-shadow: var(--container-shadow) 14px 14px;
 }
 .row {
     display: grid;
     grid-template-columns: 0.3fr 1fr 0.25fr 0.3fr;
     overflow: hidden;
+    gap: 0.5rem;
 }
 .cell {
     overflow: hidden;
     text-wrap: nowrap;
     text-overflow: ellipsis;
-    padding-inline-end: 0.25rem;
 }
 .cell:first-child {
     width: fit-content;
