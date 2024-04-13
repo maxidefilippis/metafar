@@ -1,0 +1,22 @@
+.table {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.25fr 0.3fr;
+    overflow: hidden;
+}
+.cell {
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    padding-inline-end: 0.25rem;
+}
+.cell:first-child {
+    width: fit-content;
+    cursor: pointer;
+}
+.cell:first-child:hover {
+    text-decoration: underline;
+}
