@@ -1,14 +1,13 @@
-import { useTranslation } from 'react-i18next';
+import { RouterProvider } from 'react-router-dom';
 import { Layout } from './layout';
+import { defaultRouter } from './router/routes';
 
 import './App.css';
 
 function App() {
-    const { t } = useTranslation('layout');
-
     return (
         <Layout>
-            <h1>{t('TITLE')}</h1>
+            <RouterProvider router={defaultRouter} />
         </Layout>
     );
 }

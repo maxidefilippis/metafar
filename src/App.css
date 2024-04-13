@@ -5,12 +5,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    --primary-color: #ff6600;
+    --primary-color: #04353f;
     --secondary-color: #007fff;
-    --terciary-color: #00ced1;
+    --terciary-color: #ff6600;
     --black: #000000;
-    --footer-background: #00000010;
     --white: #ffffff;
+    --text-small-color: #555;
+    --footer-background: #00000010;
 }
 
 * {
