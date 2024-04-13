@@ -1,5 +1,25 @@
 .button {
     cursor: pointer;
-    padding: 0.25rem;
-    color: var(--text-small-color);
+    color: var(--black);
+    background: var(--container-background);
+    border-radius: var(--container-border-radius);
+    border: 1px solid var(--grey);
+    -webkit-box-shadow: 4px 4px var(--container-shadow);
+    box-shadow: 4px 4px var(--container-shadow);
+    font-size: 12px;
+    padding: 0.25rem 1rem;
+    margin-right: 6px;
+    font-weight: 600;
+}
+
+.button:hover {
+    background: var(--container-shadow);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transform: translate3d(2px, 2px, 0);
+    -moz-transform: translate3d(2px, 2px, 0);
+    transform: translate3d(2px, 2px, 0);
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }

@@ -1,16 +1,16 @@
 import styles from './index.module.css';
 
 interface ButtonProps {
-    text: string;
-    action: () => void;
+    children: string;
+    onClick: () => void;
 }
-export const Button = ({ text, action }: ButtonProps) => {
+export const Button = ({ children, onClick }: ButtonProps) => {
     return (
         <button
             className={styles.button}
-            onClick={action}
+            onClick={onClick}
         >
-            {text}
+            <span>{children}</span>
         </button>
     );
 };
