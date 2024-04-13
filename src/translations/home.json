@@ -1,0 +1,16 @@
+{
+    "TABLE": {
+        "PAGE": "Página {{ currentPage }} de {{ totalPages }}",
+        "RESULTS": "Mostrando {{ pageSize }} resultados de {{ count }}",
+        "ROWS": {
+            "SYMBOL": "Símbolo",
+            "NAME": "Nombre",
+            "CURRENCY": "Moneda",
+            "TYPE": "Tipo"
+        }
+    },
+    "BUTTONS": {
+        "BACK": "Anterior",
+        "NEXT": "Siguiente"
+    }
+}
