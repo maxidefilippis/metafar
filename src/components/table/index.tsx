@@ -3,9 +3,17 @@ import styles from './index.module.css';
 
 interface RenderTableProps {
     children: JSX.Element | JSX.Element[];
+    heigth: number;
 }
-export const Table = ({ children }: RenderTableProps) => {
-    return <div className={styles.table}>{children}</div>;
+export const Table = ({ children, heigth }: RenderTableProps) => {
+    return (
+        <div
+            className={styles.table}
+            style={{ minHeight: `${heigth}px` }}
+        >
+            {children}
+        </div>
+    );
 };
 
 interface TableRowProps {

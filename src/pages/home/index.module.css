@@ -3,18 +3,29 @@
     justify-content: space-between;
     padding-inline: 0.25rem;
 }
-.table{
-    padding-block: 0.5rem 2rem;
+.table {
+    padding-block: 1rem 1.5rem;
 }
-.results {
+.searchBox {
     display: flex;
     align-items: center;
+    gap: 0.25rem;
+}
+.results {
+    display: grid;
+    align-items: center;
     padding-inline: 0.25rem;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.results > span:last-child {
+    justify-self: flex-end;
+}
+.results > div {
+    justify-self: center;
 }
 .buttons {
     display: grid;
-    gap: 0.2rem;
+    gap: 0.5rem;
     grid-template-columns: 1fr 1fr;
     width: 300px;
 }

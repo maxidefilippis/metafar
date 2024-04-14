@@ -6,7 +6,7 @@ import { apiConnect } from '../services/apiClient';
 
 export class ActionsApi {
     async getActionsStock(): Promise<StockResponse> {
-        let url = `${apiUrl}/stocks`;
+        let url = `${apiUrl}/stocks?source=docs&exchange=NYSE`;
         return await apiConnect(url, ApiMethods.GET);
     }
     async getActionDetail(symbol: string): Promise<Action> {

@@ -5,14 +5,21 @@
     border-radius: var(--container-border-radius);
     border: 2px solid var(--container-border);
     padding: 1rem 1.5rem 1.5rem;
-    -webkit-box-shadow: var(--container-shadow) 14px 14px;
-    box-shadow: var(--container-shadow) 14px 14px;
+    -webkit-box-shadow: var(--container-shadow) 10px 10px;
+    box-shadow: var(--container-shadow) 10px 10px;
     gap: 0.25rem;
 }
 .row {
     display: grid;
     grid-template-columns: 0.3fr 1fr 0.25fr 0.25fr;
     gap: 0.5rem;
+}
+.row:first-child {
+    color: var(--secondary-color);
+}
+.row:not(:last-child):not(:first-child) {
+    border-bottom: 1px dotted var(--light-grey);
+    padding-block: 0.1rem;
 }
 .cell {
     overflow: hidden;
