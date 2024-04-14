@@ -22,7 +22,7 @@ interface TableCellProps {
 export const TableCell = ({ data, onClick }: TableCellProps) => {
     return (
         <div
-            className={`${styles.cell} ${onClick && styles.link}`}
+            className={`${styles.cell} ${onClick ? styles.link : ''}`}
             onClick={onClick}
         >
             <Typography text={data} />

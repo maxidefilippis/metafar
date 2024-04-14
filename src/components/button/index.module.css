@@ -11,7 +11,6 @@
     margin-right: 6px;
     font-weight: 600;
 }
-
 .button:hover:not(:disabled) {
     background: var(--container-shadow);
     -webkit-box-shadow: none;
@@ -26,4 +25,5 @@
 .button:disabled {
     cursor: default;
     background: var(--button-disabled);
+    opacity: 0.5;
 }

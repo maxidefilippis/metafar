@@ -4,7 +4,7 @@ import { components_es, home_es, layout_es } from '../translations';
 
 i18next.use(initReactI18next).init({
     lng: 'es',
-    debug: true,
+    debug: false,
     resources: {
         es: {
             layout: layout_es,
