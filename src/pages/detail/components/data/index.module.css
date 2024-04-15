@@ -14,7 +14,7 @@
 .property label {
     color: var(--secondary-color);
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
 }
 .property p {
     text-align: right;

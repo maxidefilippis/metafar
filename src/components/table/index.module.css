@@ -7,7 +7,6 @@
     padding: 1rem 1.5rem 1.5rem;
     -webkit-box-shadow: var(--container-shadow) 10px 10px;
     box-shadow: var(--container-shadow) 10px 10px;
-    gap: 0.25rem;
 }
 .row {
     display: grid;
@@ -34,4 +33,5 @@
 }
 .link:hover {
     text-decoration: underline;
+    color: var(--primary-color);
 }

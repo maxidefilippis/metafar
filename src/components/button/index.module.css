@@ -6,7 +6,7 @@
     border: 1px solid var(--grey);
     -webkit-box-shadow: 4px 4px var(--container-shadow);
     box-shadow: 4px 4px var(--container-shadow);
-    font-size: 12px;
+    font-size: 14px;
     padding: 8px 10px;
     font-weight: 600;
     min-width: 120px;

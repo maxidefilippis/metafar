@@ -4,7 +4,7 @@
     gap: 0.15rem;
 }
 .radio label {
-    font-size: 11px;
+    font-size: 14px;
 }
 .radio input[type='radio'] {
     display: none;
