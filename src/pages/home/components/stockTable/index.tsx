@@ -1,16 +1,17 @@
 import { useTranslation } from 'react-i18next';
-import { TableCell, TableRow } from '../../../components/table';
-import { Action } from '../../../models/action';
+import { TableCell, TableRow } from '../../../../components/table';
+import { Action } from '../../../../models/action';
+import styles from './index.module.css';
 
-interface ActionsTableProps {
+interface StockTableProps {
     actions: Action[];
     seeDetail: (action: Action) => void;
 }
-export const ActionsTable = ({ actions, seeDetail }: ActionsTableProps) => {
+export const StockTable = ({ actions, seeDetail }: StockTableProps) => {
     const { t } = useTranslation('home');
 
     return (
-        <>
+        <div className={styles.stockTable}>
             <TableRow>
                 <TableCell data={t('TABLE.ROWS.SYMBOL')} />
                 <TableCell data={t('TABLE.ROWS.NAME')} />
@@ -25,6 +26,6 @@ export const ActionsTable = ({ actions, seeDetail }: ActionsTableProps) => {
                     <TableCell data={element.type} />
                 </TableRow>
             ))}
-        </>
+        </div>
     );
 };

@@ -4,7 +4,7 @@ import { RadioButton } from '../../../../../../components/radioButton';
 import { Interval } from '../../../../../../constants/intervals';
 import { useAppDispatch, useAppSelector } from '../../../../../../redux/hooks';
 import { setIntervalTime } from '../../../../../../redux/reducers/detailSlice';
-import styles from './realtimeGraphParams.module.css';
+import styles from './index.module.css';
 
 export const RealTimeGraphParams = () => {
     const { t } = useTranslation('detail');

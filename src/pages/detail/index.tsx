@@ -15,7 +15,7 @@ import { getActionRealTimePrice } from '../../redux/actions/getActionRealTimePri
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { DetailData } from './components/data';
 import { DetailGraph } from './components/graph';
-import { GraphTypeSelector } from './components/graph/controllers/graphType/graphTypeSelector';
+import { GraphTypeSelector } from './components/graph/controllers/graphType';
 import styles from './index.module.css';
 
 export const DetailPage = () => {

@@ -7,8 +7,8 @@ import { Skeleton } from '../../../../components/skeleton';
 import { Typography } from '../../../../components/typografhy';
 import { StatusCode } from '../../../../constants/statusCode';
 import { useAppSelector } from '../../../../redux/hooks';
-import { HistoricGraphParams } from './controllers/historic/historicGraphParams';
-import { RealTimeGraphParams } from './controllers/realTime/realTimeGraphParams';
+import { HistoricGraphParams } from './controllers/historic';
+import { RealTimeGraphParams } from './controllers/realTime';
 import styles from './index.module.css';
 import { GraphType } from '../../../../constants/graphType';
 

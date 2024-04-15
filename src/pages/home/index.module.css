@@ -6,12 +6,6 @@
 .table {
     padding-block: 1rem 1.5rem;
 }
-.searchBox {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    width: 300px;
-}
 .results {
     display: grid;
     align-items: center;

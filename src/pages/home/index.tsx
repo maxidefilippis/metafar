@@ -2,19 +2,17 @@ import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
-import { SearcIcon } from '../../components/icons/searchIcon';
-import { InputText } from '../../components/input';
 import { Skeleton } from '../../components/skeleton';
 import { Table } from '../../components/table';
 import { Typography } from '../../components/typografhy';
 import { pageSize } from '../../constants/globals';
-import { Action } from '../../models/action';
 import { TextType } from '../../constants/textType';
+import { Action } from '../../models/action';
 import { getStockFromApi } from '../../redux/actions/getStock';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { setActionDetail } from '../../redux/reducers/detailSlice';
-import { setFilteredActions, setSearch } from '../../redux/reducers/stockSlice';
-import { ActionsTable } from './components/actionsTable';
+import { SearchBox } from './components/searchBox';
+import { StockTable } from './components/stockTable';
 import styles from './index.module.css';
 
 export const HomePage = () => {
@@ -50,21 +48,6 @@ export const HomePage = () => {
         dispatch(setActionDetail(element));
         navigate(`/detail/${element.symbol}/${element.exchange}`);
     };
-    const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const search = e.target.value;
-        dispatch(setSearch(search));
-
-        if (search) {
-            const actionsFiltered = actions.filter((action) => {
-                const searchMatchesName = action.name.toLowerCase().includes(search.toLowerCase());
-                const searchMatchesSymbol = action.symbol.toLocaleLowerCase().includes(search.toLowerCase());
-                return searchMatchesName || searchMatchesSymbol;
-            });
-            dispatch(setFilteredActions(actionsFiltered));
-        } else {
-            dispatch(setFilteredActions([]));
-        }
-    };
 
     useEffect(() => {
         !actions.length && dispatch(getStockFromApi());
@@ -87,13 +70,10 @@ export const HomePage = () => {
         <>
             <div className={styles.title}>
                 <Typography type={TextType.TITLE} text={t('HOME.TITLE')} />
-                <div className={styles.searchBox}>
-                    <SearcIcon size={20} />
-                    <InputText value={search} onChange={(e) => handleFilterChange(e)} />
-                </div>
+                <SearchBox />
             </div>
             <div className={styles.table}>
-                <Table heigth={470} children={<ActionsTable actions={actionsList} seeDetail={seeActionDetail} />} />
+                <Table heigth={565} children={<StockTable actions={actionsList} seeDetail={seeActionDetail} />} />
             </div>
             <div className={styles.results}>
                 <Typography type={TextType.TEXT} text={textPages} />
