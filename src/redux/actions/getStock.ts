@@ -1,5 +1,6 @@
 import { ActionsApi } from '../../api/actionsApi';
-import { setActions, setLoading } from '../reducers/stockSlice';
+import { setLoading } from '../reducers/globalSlice';
+import { setActions } from '../reducers/stockSlice';
 import { AppThunk } from '../store';
 
 const actionsApi = new ActionsApi();
