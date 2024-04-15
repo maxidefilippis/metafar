@@ -28,7 +28,7 @@
 }
 
 body {
-    background: url('/public/background.svg');
+    background: url('/background.svg');
     min-height: 100vh;
     min-width: 100%;
 }
