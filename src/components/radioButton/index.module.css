@@ -1,0 +1,22 @@
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+}
+.radio label {
+    font-size: 11px;
+}
+.radio input[type='radio'] {
+    display: none;
+}
+.radio label {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--terciary-color);
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.radio input[type='radio']:checked + label {
+    border-color: var(--secondary-color);
+}
