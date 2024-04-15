@@ -52,7 +52,7 @@ export const DetailPage = () => {
             const fetchPricesInRealTime = setInterval(getPricesGraph, setTimeIntervals(interval));
             return () => clearInterval(fetchPricesInRealTime);
         }
-    }, [isRealTimeGraph, interval]);
+    }, [isRealTimeGraph, interval, timeSerie.status]);
 
     if (!apiKey || !apiUrl) return <></>;
     return (
