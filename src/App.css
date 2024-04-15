@@ -5,8 +5,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    --primary-color: #04353f;
-    --secondary-color: #ad0000;
+    --primary-color: #0099bb;
+    --secondary-color: #aa0000;
+    --terciary-color: #f0f0f0;
     --black: #000000;
     --white: #ffffff;
     --grey: #333;
@@ -30,4 +31,9 @@ body {
     background: url('/public/background.svg');
     min-height: 100vh;
     min-width: 100%;
+}
+
+.highcharts-legend,
+.highcharts-credits {
+    display: none;
 }
