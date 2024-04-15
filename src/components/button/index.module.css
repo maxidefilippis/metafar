@@ -7,8 +7,9 @@
     -webkit-box-shadow: 4px 4px var(--container-shadow);
     box-shadow: 4px 4px var(--container-shadow);
     font-size: 12px;
-    padding: 0.25rem 1rem;
+    padding: 8px 10px;
     font-weight: 600;
+    min-width: 120px;
 }
 .button:hover:not(:disabled) {
     background: var(--container-shadow);
