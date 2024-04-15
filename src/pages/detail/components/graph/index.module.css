@@ -1,0 +1,17 @@
+.chartContainer {
+    text-align: center;
+    min-height: 250px;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    min-height: 70px;
+}
+.graph {
+    width: 100%;
+    min-height: 200px;
+}

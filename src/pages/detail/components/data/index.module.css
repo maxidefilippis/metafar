@@ -1,0 +1,21 @@
+.dataContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 0.5rem 5rem;
+}
+.property {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-bottom: 1px dotted var(--light-grey);
+    padding-block: 0.1rem;
+}
+.property label {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 14px;
+}
+.property p {
+    text-align: right;
+}

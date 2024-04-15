@@ -1,0 +1,8 @@
+.realTimeParams {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.realTimeParams label {
+    font-size: 11px;
+}

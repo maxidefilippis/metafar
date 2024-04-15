@@ -1,0 +1,10 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 0.25rem;
+}
+.table {
+    padding-block: 1rem 2rem;
+}
+
