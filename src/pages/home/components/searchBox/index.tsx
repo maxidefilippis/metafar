@@ -1,7 +1,7 @@
 import { SearcIcon } from '../../../../components/icons/searchIcon';
 import { InputText } from '../../../../components/input';
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks';
-import { setFilteredActions, setSearch } from '../../../../redux/reducers/stockSlice';
+import { setCurrentPage, setFilteredActions, setSearch } from '../../../../redux/reducers/stockSlice';
 import styles from './index.module.css';
 
 export const SearchBox = () => {
@@ -11,7 +11,7 @@ export const SearchBox = () => {
     const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const search = e.target.value;
         dispatch(setSearch(search));
-
+        dispatch(setCurrentPage(1));
         if (search) {
             const actionsFiltered = actions.filter((action) => {
                 const searchMatchesName = action.name.toLowerCase().includes(search.toLowerCase());

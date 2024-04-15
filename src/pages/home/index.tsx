@@ -9,6 +9,7 @@ import { TextType } from '../../constants/textType';
 import { Action } from '../../models/action';
 import { getStockFromApi } from '../../redux/actions/getStock';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import { setCurrentPage } from '../../redux/reducers/stockSlice';
 import { SearchBox } from './components/searchBox';
 import { StockTable } from './components/stockTable';
 import styles from './index.module.css';
@@ -18,29 +19,21 @@ export const HomePage = () => {
     const dispatch = useAppDispatch();
 
     const { loading } = useAppSelector((store) => store.global);
-    const { actions, search, filteredActions } = useAppSelector((store) => store.stock);
-    const [currentPage, setCurrentPage] = useState<number>(1);
+    const { actions, search, filteredActions, currentPage } = useAppSelector((store) => store.stock);
     const [actionsList, setActionsList] = useState<Action[]>([]);
 
     const firstElement = useMemo(() => (currentPage - 1) * pageSize, [currentPage, pageSize]);
     const lastElement = useMemo(() => currentPage * pageSize, [currentPage, pageSize]);
-    const totalPages = useMemo(() => {
-        const results = search ? filteredActions : actions;
-        return Math.ceil(results.length / pageSize) || 1;
-    }, [actions, search]);
+    const totalResults = useMemo(() => (search ? filteredActions : actions), [search, filteredActions, actions]);
+    const totalPages = useMemo(() => Math.ceil(totalResults.length / pageSize) || 1, [actions, search]);
 
-    const textPages = useMemo(() => t('TABLE.PAGE', { currentPage, totalPages }), [currentPage, totalPages]);
-    const textResults = useMemo(
-        () => t('TABLE.RESULTS', { pageSize: actionsList.length, count: search ? filteredActions.length : actions.length }),
-        [actionsList, search, filteredActions, actions],
-    );
+    const currentPageNumber = useMemo(() => t('TABLE.PAGE', { currentPage, totalPages }), [currentPage, totalPages]);
+    const currentResults = useMemo(() => t('TABLE.RESULTS', { pageSize: actionsList.length, count: totalResults.length }), [actionsList, totalResults]);
 
-    const handleBack = () => {
-        setCurrentPage((page) => page - 1);
-    };
-    const handleNext = () => {
-        setCurrentPage((page) => page + 1);
-    };
+    const disableNext = useMemo(() => currentPage <= 1, [currentPage]);
+    const disableBack = useMemo(() => currentPage >= totalPages, [currentPage, totalPages]);
+    const handleBack = () => dispatch(setCurrentPage(currentPage - 1));
+    const handleNext = () => dispatch(setCurrentPage(currentPage + 1));
 
     useEffect(() => {
         !actions.length && dispatch(getStockFromApi());
@@ -69,16 +62,12 @@ export const HomePage = () => {
                 <Table heigth={565} children={<StockTable actions={actionsList} />} />
             </div>
             <div className={styles.results}>
-                <Typography type={TextType.TEXT} text={textPages} />
+                <Typography type={TextType.TEXT} text={currentPageNumber} />
                 <div className={styles.buttons}>
-                    <Button onClick={handleBack} disabled={currentPage <= 1}>
-                        {t('BUTTONS.BACK')}
-                    </Button>
-                    <Button onClick={handleNext} disabled={currentPage >= totalPages}>
-                        {t('BUTTONS.NEXT')}
-                    </Button>
+                    <Button onClick={handleBack} disabled={disableNext}>{t('BUTTONS.BACK')}</Button>
+                    <Button onClick={handleNext} disabled={disableBack}>{t('BUTTONS.NEXT')}</Button>
                 </div>
-                <Typography type={TextType.TEXT} text={textResults} />
+                <Typography type={TextType.TEXT} text={currentResults} />
             </div>
         </>
     );
