@@ -1,5 +1,7 @@
 {
     "BACK_BUTTON": {
         "TEXT": "Volver"
-    }
+    },
+    "LAST_UPDATE": "Última actualización",
+    "NOT_FOUND": "La ruta a la que intenta ingresar no existe"
 }

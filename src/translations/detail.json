@@ -1,0 +1,25 @@
+{
+    "PROPERTY": {
+        "NAME": "Nombre",
+        "MIC_CODE": "Código",
+        "EXCHANGE": "Exchange",
+        "TYPE": "Tipo",
+        "CURRENCY": "Moneda",
+        "SYMBOL": "Símbolo",
+        "COUNTRY": "País"
+    },
+    "GRAPH_TYPE": {
+        "HISTORY": "Histórico",
+        "REAL_TIME": "Tiempo real"
+    },
+    "ERRORS": {
+        "NOT_ACTION_FOUND": "No se encontró ninguna acción con la referencia indicada",
+        "NO_DATA_AVAILABLE": "No hay datos para el rango seleccionado",
+        "DATES": "Seleccione los parametros y luego presione graficar"
+    },
+    "PRICE": "Cotización",
+    "GRAPH": "Graficar",
+    "TIME_FROM": "Desde",
+    "TIME_TO": "Hasta",
+    "INTERVAL": "Intervalo"
+}
