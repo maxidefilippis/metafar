@@ -2,13 +2,21 @@
     text-align: center;
     min-height: 250px;
 }
+.errorsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--secondary-color);
+    height: 50px;
+}
 .controls {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     min-height: 70px;
 }
 .graph {
@@ -16,7 +24,7 @@
     min-height: 200px;
 }
 @media (max-width: 600px) {
-    .controls{
+    .controls {
         gap: 2rem;
     }
     .graph {

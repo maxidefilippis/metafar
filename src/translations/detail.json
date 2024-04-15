@@ -15,7 +15,8 @@
     "ERRORS": {
         "NOT_ACTION_FOUND": "No se encontró ninguna acción con la referencia indicada",
         "NO_DATA_AVAILABLE": "No hay datos para el rango seleccionado",
-        "DATES": "Seleccione los parámetros y luego presione graficar"
+        "PARAMETERS": "Seleccione los parámetros y luego presione graficar",
+        "DATES": "La fecha inicial no puede ser mayor a la fecha final"
     },
     "PRICE": "Cotización",
     "GRAPH": "Graficar",

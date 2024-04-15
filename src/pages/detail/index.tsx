@@ -7,6 +7,7 @@ import { Table } from '../../components/table';
 import { Typography } from '../../components/typografhy';
 import { apiKey, apiUrl } from '../../constants/globals';
 import { GraphType } from '../../constants/graphType';
+import { StatusCode } from '../../constants/statusCode';
 import { TextType } from '../../constants/textType';
 import { setTimeIntervals } from '../../functions/setTimeIntervals';
 import { getActionDetailFromApi } from '../../redux/actions/getActionDetail';
@@ -23,7 +24,7 @@ export const DetailPage = () => {
     const dispatch = useAppDispatch();
     const { action, exchange } = useParams();
     const { loading } = useAppSelector((store) => store.global);
-    const { actionDetail, graphType, timeFrom, timeTo, interval } = useAppSelector((store) => store.detail);
+    const { actionDetail, graphType, timeFrom, timeTo, interval, timeSerie } = useAppSelector((store) => store.detail);
 
     const isHistoryGraph = useMemo(() => graphType === GraphType.HISTORY, [graphType]);
     const isRealTimeGraph = useMemo(() => graphType === GraphType.REAL_TIME, [graphType]);
@@ -47,7 +48,7 @@ export const DetailPage = () => {
     }, []);
 
     useEffect(() => {
-        if (isRealTimeGraph) {
+        if (isRealTimeGraph && timeSerie?.status === StatusCode.OK) {
             const fetchPricesInRealTime = setInterval(getPricesGraph, setTimeIntervals(interval));
             return () => clearInterval(fetchPricesInRealTime);
         }
