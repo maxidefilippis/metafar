@@ -1,3 +1,5 @@
+import styles from './serchIcon.module.css';
+
 interface IconProps {
     size: number;
 }
@@ -8,13 +10,14 @@ export const SearcIcon = ({ size }: IconProps) => {
             width={size ? `${size}px` : `1em`}
             height={size ? `${size}px` : `1em`}
             viewBox="0 0 24 24"
+            className={styles.searchIcon}
         >
             <path
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"
             />
         </svg>
