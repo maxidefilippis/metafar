@@ -25,15 +25,23 @@ cd metafar
 npm install
 ```
 
+4. Crea un archivo .env en la raíz del directorio con las siguientes variables:
+
+```bash
+VITE_API_KEY = < Tu api key de twelve data >
+VITE_API_URL = https://api.twelvedata.com
+VITE_APP_PAGESIZE = 20
+```
+
 ## Uso
 
-4. Después de haber instalado las dependencias, puedes iniciar el servidor de desarrollo utilizando el siguiente comando:
+5. Iniciar el servidor de desarrollo utilizando el siguiente comando:
 
 ```bash
  npm run dev
 ```
 
-5. Una vez que el servidor esté corriendo, puedes acceder a la aplicación desde tu navegador web visitando http://localhost:5173 .
+6. Una vez que el servidor esté corriendo, puedes acceder a la aplicación desde tu navegador web visitando http://localhost:5173 .
 
 ## Deploy
 
