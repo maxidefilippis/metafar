@@ -1,4 +1,4 @@
-import { TextType } from '../../models/textType';
+import { TextType } from '../../constants/textType';
 import styles from './index.module.css';
 
 interface TypographyProps {
