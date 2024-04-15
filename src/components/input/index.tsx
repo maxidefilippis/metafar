@@ -1,11 +1,11 @@
 import styles from './index.module.css';
 
-interface InputProps {
+interface InputTextProps {
     value: string;
     onChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-export const Input = ({ value, onChange }: InputProps) => {
+export const InputText = ({ value, onChange }: InputTextProps) => {
     return (
         <input
             className={styles.input}

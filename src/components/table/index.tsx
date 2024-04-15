@@ -3,13 +3,13 @@ import styles from './index.module.css';
 
 interface RenderTableProps {
     children: JSX.Element | JSX.Element[];
-    heigth: number;
+    heigth?: number;
 }
 export const Table = ({ children, heigth }: RenderTableProps) => {
     return (
         <div
             className={styles.table}
-            style={{ minHeight: `${heigth}px` }}
+            style={{ minHeight: heigth ? `${heigth}px` : 'auto' }}
         >
             {children}
         </div>

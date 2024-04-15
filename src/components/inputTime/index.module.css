@@ -1,0 +1,16 @@
+.inputTime {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.inputTime input {
+    display: inline-block;
+    padding: 8px 10px;
+    background-color: var(--terciary-color);
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.inputTime label {
+    font-size: 11px;
+}
