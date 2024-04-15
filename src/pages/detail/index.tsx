@@ -63,7 +63,7 @@ export const DetailPage = () => {
             <div className={styles.table}>
                 <Table children={<DetailData />} />
             </div>
-            <div className={styles.title}>
+            <div className={styles.detailTitle}>
                 <Typography type={TextType.TITLE} text={t('PRICE')} />
                 <GraphTypeSelector />
             </div>

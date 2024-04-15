@@ -30,5 +30,6 @@
 @media (max-width: 600px) {
     .button {
         height: 40px;
+        width: 100%;
     }
 }

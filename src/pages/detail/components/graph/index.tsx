@@ -36,7 +36,7 @@ export const DetailGraph = ({ handleGraph }: DetailGraphProps) => {
             </div>
             <div className={styles.graph}>
                 {loading ? (
-                    <Skeleton rows={6} />
+                    <Skeleton rows={5} />
                 ) : (
                     <>
                         {timeSerie?.status === StatusCode.NONE && <Typography text={t('ERRORS.DATES')} />}

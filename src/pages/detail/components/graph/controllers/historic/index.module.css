@@ -6,3 +6,18 @@
 .historicParams label {
     font-size: 14px;
 }
+@media (max-width: 600px) {
+    .historicParams {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .historicParams > div {
+        display: flex;
+        flex-direction: column;
+    }
+    .historicParams input {
+        width: 100%;
+        text-align: center;
+    }
+}
