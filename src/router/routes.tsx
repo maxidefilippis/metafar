@@ -1,14 +1,19 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Home } from '../pages/home';
-import { Detail } from '../pages/detail';
+import { HomePage } from '../pages/home';
+import { DetailPage } from '../pages/detail';
+import { NotFoundPage } from '../pages/notFound';
 
 export const defaultRouter = createBrowserRouter([
     {
         path: '/',
-        element: <Home />,
+        element: <HomePage />,
     },
     {
-        path: '/detail',
-        element: <Detail />,
+        path: '/detail/:action/:exchange',
+        element: <DetailPage />,
+    },
+    {
+        path: '*',
+        element: <NotFoundPage />,
     },
 ]);
