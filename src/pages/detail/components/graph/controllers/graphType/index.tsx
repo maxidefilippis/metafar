@@ -3,7 +3,7 @@ import { RadioButton } from '../../../../../../components/radioButton';
 import { GraphType } from '../../../../../../constants/graphType';
 import { useAppDispatch, useAppSelector } from '../../../../../../redux/hooks';
 import { setGraphType } from '../../../../../../redux/reducers/detailSlice';
-import styles from './graphTypeSelector.module.css';
+import styles from './index.module.css';
 
 export const GraphTypeSelector = () => {
     const { t } = useTranslation('detail');

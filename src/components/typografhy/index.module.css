@@ -13,3 +13,20 @@
 .text {
     font-size: 12px;
 }
+@media (max-width: 600px) {
+    .mainTitle {
+        font-size: 22px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .paragraph {
+        font-size: 14px;
+    }
+    .text {
+        font-size: 11px;
+    }
+}

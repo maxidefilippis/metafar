@@ -1,6 +1,11 @@
 .searchBox {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.5rem;
     width: 300px;
+}
+@media (max-width: 600px) {
+    .searchBox {
+        width: 100%;
+    }
 }

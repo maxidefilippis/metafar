@@ -22,3 +22,8 @@
     height: 40px;
     background-color: var(--footer-background);
 }
+@media (max-width: 600px) {
+    .main {
+        padding-inline: 1rem;
+    }
+}

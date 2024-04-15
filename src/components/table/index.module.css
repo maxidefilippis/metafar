@@ -11,16 +11,16 @@
 .row {
     display: grid;
     grid-template-columns: 0.3fr 1fr 0.25fr 0.25fr;
-    gap: 0.5rem;
 }
 .row:first-child {
     color: var(--secondary-color);
 }
-.row:not(:last-child):not(:first-child) {
+.row:not(:first-child) {
     border-bottom: 1px dotted var(--light-grey);
     padding-block: 0.1rem;
 }
-.cell {
+.cell,
+.cell p {
     overflow: hidden;
     text-wrap: nowrap;
     text-overflow: ellipsis;
@@ -32,6 +32,17 @@
     cursor: pointer;
 }
 .link:hover {
-    text-decoration: underline;
     color: var(--primary-color);
+}
+@media (max-width: 600px) {
+    .row {
+        display: grid;
+        grid-template-columns: 0.3fr 1fr;
+        gap: 3rem;
+    }
+}
+@media (min-width: 601px) and (max-width: 950px) {
+    .row {
+        grid-template-columns: 0.3fr 1fr 0.25fr 0.6fr;
+    }
 }

@@ -56,7 +56,7 @@ export const DetailPage = () => {
     if (!apiKey || !apiUrl) return <></>;
     return (
         <>
-            <div className={styles.title}>
+            <div className={styles.detailTitle}>
                 {loading && !actionDetail?.name && <Skeleton rows={1} />}
                 {<Typography type={TextType.TITLE} text={actionDetail?.name} />}
             </div>

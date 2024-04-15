@@ -27,3 +27,8 @@
     background: var(--button-disabled);
     opacity: 0.5;
 }
+@media (max-width: 600px) {
+    .button {
+        height: 40px;
+    }
+}

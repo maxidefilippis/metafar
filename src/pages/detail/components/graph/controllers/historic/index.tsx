@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../../../../../redux/hooks';
 import { setTimeFrom, setTimeTo } from '../../../../../../redux/reducers/detailSlice';
 import { InputTime } from '../../../../../../components/inputTime';
 import { GraphType } from '../../../../../../constants/graphType';
-import styles from './historicGraphParams.module.css';
+import styles from './index.module.css';
 
 export const HistoricGraphParams = () => {
     const { t } = useTranslation('detail');

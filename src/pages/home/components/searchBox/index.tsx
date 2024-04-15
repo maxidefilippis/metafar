@@ -26,7 +26,7 @@ export const SearchBox = () => {
 
     return (
         <div className={styles.searchBox}>
-            <SearcIcon size={20} />
+            <SearcIcon size={28} />
             <InputText value={search} onChange={(e) => handleFilterChange(e)} />
         </div>
     );
